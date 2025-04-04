@@ -4,7 +4,7 @@ test.describe("Testing Dashboard functionality",()=>{
     test("Testing dashboard",async({page})=>{
         await page.goto("https://pyramidcore.pyramidci.com/security/PCILoginNew.aspx");
         await page.locator("#pydLogin_txtUserid").fill("Dhashwathi.M@celsiortech.com");
-        await page.locator("#pydLogin_txtUserPwd").fill("Dhash@12345");
+        await page.locator("#pydLogin_txtUserPwd").fill("######");
         await page.click('#pydLogin_btnLogin');
         await page.waitForLoadState('networkidle'); 
         const contentsFrame = page.frame({ name: "contents" });
